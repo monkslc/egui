@@ -145,4 +145,13 @@ impl Painter {
     pub fn destroy(&mut self) {
         // TODO(emilk): something here?
     }
+
+    pub fn register_native_texture(
+        &mut self,
+        texture: &wgpu::TextureView,
+        texture_filter: wgpu::FilterMode,
+    ) -> egui::TextureId {
+        self.egui_rpass
+            .register_native_texture(&self.device, texture, texture_filter)
+    }
 }
