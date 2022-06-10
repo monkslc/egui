@@ -42,7 +42,7 @@ struct UniformBuffer {
 
 /// Wraps the buffers and includes additional information.
 #[derive(Debug)]
-struct SizedBuffer {
+pub struct SizedBuffer {
     buffer: wgpu::Buffer,
     /// number of bytes
     size: usize,
@@ -50,17 +50,17 @@ struct SizedBuffer {
 
 /// Render pass to render a egui based GUI.
 pub struct RenderPass {
-    render_pipeline: wgpu::RenderPipeline,
-    index_buffers: Vec<SizedBuffer>,
-    vertex_buffers: Vec<SizedBuffer>,
-    uniform_buffer: SizedBuffer,
-    uniform_bind_group: wgpu::BindGroup,
-    texture_bind_group_layout: wgpu::BindGroupLayout,
+    pub render_pipeline: wgpu::RenderPipeline,
+    pub index_buffers: Vec<SizedBuffer>,
+    pub vertex_buffers: Vec<SizedBuffer>,
+    pub uniform_buffer: SizedBuffer,
+    pub uniform_bind_group: wgpu::BindGroup,
+    pub texture_bind_group_layout: wgpu::BindGroupLayout,
     /// Map of egui texture IDs to textures and their associated bindgroups (texture view +
     /// sampler). The texture may be None if the TextureId is just a handle to a user-provided
     /// sampler.
-    textures: HashMap<egui::TextureId, (Option<wgpu::Texture>, wgpu::BindGroup)>,
-    next_user_texture_id: u64,
+    pub textures: HashMap<egui::TextureId, (Option<wgpu::Texture>, wgpu::BindGroup)>,
+    pub next_user_texture_id: u64,
 }
 
 impl RenderPass {

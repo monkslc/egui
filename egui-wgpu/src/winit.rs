@@ -4,11 +4,11 @@ use crate::renderer;
 ///
 /// Alternatively you can use [`crate::renderer`] directly.
 pub struct Painter {
-    device: wgpu::Device,
-    queue: wgpu::Queue,
-    surface_config: wgpu::SurfaceConfiguration,
-    surface: wgpu::Surface,
-    egui_rpass: renderer::RenderPass,
+    pub device: wgpu::Device,
+    pub queue: wgpu::Queue,
+    pub surface_config: wgpu::SurfaceConfiguration,
+    pub surface: wgpu::Surface,
+    pub egui_rpass: renderer::RenderPass,
 }
 
 impl Painter {
