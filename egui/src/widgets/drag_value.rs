@@ -23,7 +23,7 @@ impl MonoState {
             self.last_dragged_value = None;
         }
 
-        if input.key_released(Key::Tab) {
+        if input.key_pressed(Key::Tab) {
             self.edit_string = None;
         }
     }
