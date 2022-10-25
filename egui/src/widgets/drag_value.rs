@@ -18,10 +18,9 @@ pub struct MonoState {
 
 impl MonoState {
     pub(crate) fn end_frame(&mut self, input: &InputState) {
-        if input.pointer.any_pressed() || input.pointer.any_released() {
+        if input.pointer.any_pressed() || input.pointer.any_released() || input.key_down(Key::Tab) {
             self.last_dragged_id = None;
             self.last_dragged_value = None;
-            self.edit_string = None;
         }
     }
 }
