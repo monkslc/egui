@@ -77,7 +77,7 @@ pub struct Memory {
     pub(crate) window_interaction: Option<window::WindowInteraction>,
 
     #[cfg_attr(feature = "persistence", serde(skip))]
-    pub(crate) drag_value: crate::widgets::drag_value::MonoState,
+    pub drag_value: crate::widgets::drag_value::MonoState,
 
     pub(crate) areas: Areas,
 

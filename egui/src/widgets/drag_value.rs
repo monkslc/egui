@@ -8,7 +8,7 @@ use crate::*;
 
 /// Same state for all [`DragValue`]s.
 #[derive(Clone, Debug, Default)]
-pub(crate) struct MonoState {
+pub struct MonoState {
     last_dragged_id: Option<Id>,
     last_dragged_value: Option<f64>,
     /// For temporary edit of a [`DragValue`] value.
