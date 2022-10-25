@@ -8,7 +8,7 @@ use crate::*;
 
 mod button;
 pub mod color_picker;
-pub(crate) mod drag_value;
+pub mod drag_value;
 mod hyperlink;
 mod image;
 mod label;
