@@ -21,6 +21,7 @@ impl MonoState {
         if input.pointer.any_pressed() || input.pointer.any_released() {
             self.last_dragged_id = None;
             self.last_dragged_value = None;
+            self.edit_string = None;
         }
     }
 }
